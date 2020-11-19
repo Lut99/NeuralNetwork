@@ -59,4 +59,4 @@ Feel free to do whatever you want with this code, as long as you:
 - reference this repository somehow
 - ideally, mention my name (Tim Müller) :)
 
-Additionally, it's appreciated if you make any changes also open-source.
+Additionally, it's appreciated if you make any changes publicly available.
