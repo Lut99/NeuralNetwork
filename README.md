@@ -7,7 +7,7 @@ This code was used in my bachelor thesis, which you can find [here](). It also s
 ### Compilation
 The neural network can be run through two different executables: either via ```bin/digits.out```, to run it with the Digits-dataset, or ```bin/testdata.out```, which can be used to generate random data of arbitrary size. To aid in running the neural network with the dataset, a converted version of scikit's dataset to CSV can be found in the root of the repository, as ```digits.csv```.
 
-To compile, eithe run ```make digits``` or ```make testdata``` to compile the respective executables. By default, this puts the neural network in 'verbose' mode with a sequential back-end (i.e., no parallelism applied). However, various options can be given to change this:
+To compile, either run ```make digits``` or ```make testdata``` to compile the respective executables. By default, this puts the neural network in 'verbose' mode with a sequential back-end (i.e., no parallelism applied). However, various options can be given to change this:
 - Add ```BACKEND=<version>``` to your make-command to select the desired backend for the training phase of the neural network. The Makefile compiles the correct file in the ```src/lib/NeuralNetwork``` folder, which is equal to ```NeuralNetwork_<version>.c``` (where ```<version>``` is the string supplied to the ```BACKEND``` flag). See below for an overview of the backends.
 - Add ```DEBUG=1``` to your make-command to let the Makefile add debug symbols to your compiled files.
 - Add ```PROFILE=1``` to your make-command to add gprof information to the executable.
