@@ -23,7 +23,7 @@ As stated above, can the framework be compiled with different backends for the t
     - ```OMP_CPU4```: Parallelizes not using multiple threads, but rather vectorizes the innermost loops of the training phase with SIMD. Only variation that doesn't add the optional 'threads' argument.
     - ```OMP_CPU5```: Very similar to ```OMP_CPU1```, except that this variation also applies SIMD to the training phase's innermost loops.
     - ```OMP_CPU6```: Very similar to ```OMP_CPU2```, except that this variation also applies SIMD to the training phase's innermost loops.
-    - ```OMP_CPU7```: Applies an algorithmic change by swapping the iteration and the sample and the layers loop, making it a more pipelined implementation. Provides thread safety by adding all weights in a reduction-like facshion.
+    - ```OMP_CPU7```: Applies an algorithmic change by swapping the sample loop and the layers loop, making it a more pipelined implementation. Provides thread safety by adding all weights in a reduction-like facshion.
     - ```OMP_CPU8```: Very similar to ```OMP_CPU7```, except that this variation also applies SIMD to the training phase's innermost loops.
 - ```CUDA_GPU1```: Parallelizes the training phase by offloading it to the GPU with CUDA (therefore, only works on Nvidia GPUs). Can ask for an extra, optional parameters that defines the threads per block if the proper lines are uncommented, but this has been removed to allow a script to always given the number of threads as paramater and not confuse the CUDA-implementation.
 
