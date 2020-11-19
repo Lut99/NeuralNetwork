@@ -11,11 +11,11 @@ To compile, either run ```make digits``` or ```make testdata``` to compile the r
 - Add ```BACKEND=<version>``` to your make-command to select the desired backend for the training phase of the neural network. The Makefile compiles the correct file in the ```src/lib/NeuralNetwork``` folder, which is equal to ```NeuralNetwork_<version>.c``` (where ```<version>``` is the string supplied to the ```BACKEND``` flag). See below for an overview of the backends.
 - Add ```DEBUG=1``` to your make-command to let the Makefile add debug symbols to your compiled files.
 - Add ```PROFILE=1``` to your make-command to add gprof information to the executable.
-- Add ```PLOT=1``` to your make-command to let the framework report the cost per iteration, which can them be plotted to a graph using ```make plot```. Note that this only works for the Digits-executable and for the sequential backend.
-- Add ```BENCHMARK=1``` to prevent the framework from printing anything, besides the times for various timers place in the training phase once it's done training.
+- Add ```PLOT=1``` to your make-command to let the framework report the cost per iteration, which can then be plotted to a graph using ```make plot```. Note that this only works for the Digits-executable with the sequential backend.
+- Add ```BENCHMARK=1``` to prevent the framework from printing anything, besides the times of steps in the training phase once it's done training.
 
 As stated above, can the framework be compiled with different backends for the training phase of the neural network, each of which is optimised differently. A list of possible backends are:
-- ```sequential```: Implements a sequential training phase, without any optimisations. Does not provide any additional arguments, and is the default backend when non is specified.
+- ```sequential```: Implements a sequential training phase, without any optimisations. Does not provide any additional arguments, and is the default backend when none is specified.
 - ```OMP_CPUX```: Implements a training phase which is optimised using OpenMP. The ```X``` must be replaced by a number ranging 1-8, to select different versions of the OpenMP optimisation, each optimising in a different way. All of these add the extra, optional argument that the number of threads can be supplied. The versions are:
     - ```OMP_CPU1```: Only parallelizes the forward pass, as this pass doesn't need additional thread safety
     - ```OMP_CPU2```: Paralleliz.es both the forward and backward passes, providing thread safety in the form of critical regions.
