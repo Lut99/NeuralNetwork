@@ -1,5 +1,5 @@
 # NeuralNetwork
-In this repository, you can find my implementation of a simple, feedforward neural network implemented in C and optimised using both OpenMP and CUDA. It is designed to classify handwritten digits, as given by the Digits dataset from scikit-learn (https://scikit-learn.org/stable/). However, it is not build for accuracy, but rather as a representable neural network which we is optimised in different ways and be used to run benchmarks on.
+In this repository, you can find my implementation of a simple, feedforward neural network implemented in C and optimised using both OpenMP and CUDA. It is designed to classify handwritten digits, as given by the Digits dataset from scikit-learn (https://scikit-learn.org/stable/). However, it is not build for accuracy, but rather as a representable neural network which can be used to run benchmarks on.
 
 This code was used in my bachelor thesis, which you can find [here](). It also serves as an example as the kind of research that can be done with this neural network.
 
